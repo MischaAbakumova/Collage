@@ -10,10 +10,13 @@ PImage [] images;
 int imageCount = 0;
 
 void setup() {
+  String brett_test_path = "../../photo_booth/images/photo_booth";
+  
   size(600, 600);
   dir= new java.io.File(dataPath("/Users/mischaabakumova/Dropbox/Public/photo_booth/images/photo_booth"));
   files= dir.listFiles(); //get the list og files
-  PImage [] images = new PImage[files.length];
+  printArray(files);
+  images = new PImage[files.length];
 }
 
 void draw() { 
@@ -29,8 +32,9 @@ void draw() {
         if (fileName.endsWith(".jpg") || fileName.endsWith(".JPG"))
         {
           images[imageCount++] = loadImage(files[i].getAbsolutePath());
+          image( images[i], 0, 0);
         }
     }
-        return images;
+//        return images;
 }
 
