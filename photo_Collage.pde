@@ -30,9 +30,14 @@ void draw() {
         String fileName = files[i].getName().toLowerCase();
         if (fileName.endsWith(".jpg") || fileName.endsWith(".JPG"))
         {
+<<<<<<< HEAD
           images[imageCount] = loadImage(files[i].getAbsolutePath());
           image( images[imageCount], 0, 0);
           imageCount++;
+=======
+          images[imageCount++] = loadImage(files[i].getAbsolutePath());
+          image( images[i], 0, 0);
+>>>>>>> 93141e08410e46ac4cdb55e1bdf994e8a13de912
         }
     }
 //        return images;
